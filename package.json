@@ -1,0 +1,36 @@
+{
+  "name": "test-meteor-tailwindcss",
+  "private": true,
+  "scripts": {
+    "start": "meteor run",
+    "test": "meteor test --once --driver-package meteortesting:mocha",
+    "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
+    "visualize": "meteor --production --extra-packages bundle-visualizer"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.7.6",
+    "meteor-node-stubs": "^1.0.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.jsx",
+      "server": "server/main.js"
+    },
+    "testModule": "tests/main.js"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.7.7",
+    "postcss": "^6.0.23",
+    "postcss-easy-import": "^1.0.1",
+    "postcss-load-config": "^1.2.0",
+    "tailwindcss": "^1.2.0"
+  },
+  "postcss": {
+    "plugins": {
+      "postcss-easy-import": {},
+      "tailwindcss": {}
+    }
+  }
+}
